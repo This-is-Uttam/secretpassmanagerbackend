@@ -25,7 +25,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 // Get all the passwords
-app.get('/', async (req, res) => {
+app.get('/getpass', async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection('passwords');
     const findResult = await collection.find({}).toArray();
