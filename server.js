@@ -43,7 +43,7 @@ app.post('/', async (req, res) => {
 
 app.delete('/', async (req, res) => {
     const itemId = req.body.id
-    // console.log(req.body.id)
+    console.log(req.body.id)
     const db = client.db(dbName);
     const collection = db.collection('passwords');
     const findResult = await collection.deleteOne({_id: new ObjectId(itemId)})
