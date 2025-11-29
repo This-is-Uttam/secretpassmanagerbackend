@@ -40,6 +40,16 @@ app.post('/', async (req, res) => {
     console.log('Found documents =>', findResult);
     res.json({success: true, result: findResult})
 })
+// Authentication
+app.post('/create-user', async (req, res) => {
+    const user = req.body
+    // const db = client.db(dbName);
+    // const collection = db.collection('passwords');
+    // const findResult = await collection.insertOne(password);
+    // console.log('Found documents =>', findResult);
+    // res.json({success: true, result: findResult})
+    res.json({success: true, result: user})
+})
 
 app.delete('/', async (req, res) => {
     const itemId = req.body.id
